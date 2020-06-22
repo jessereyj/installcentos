@@ -109,7 +109,7 @@ echo "******"
 yum update -y
 
 # install the following base packages
-yum install -y  wget git zile nano net-tools docker-1.13.1\
+yum install -y  wget git zile nano net-tools containerd.io docker-ce-18.06.3.ce-3.el7 \
 				bind-utils iptables-services \
 				bridge-utils bash-completion \
 				kexec-tools sos psacct openssl-devel \
