@@ -108,8 +108,18 @@ echo "******"
 # install updates
 yum update -y
 
+
+#install yum utils
+yum install -y yum-utils
+
+#add docker ce repo
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+#install containerd
+yum install -y containerd.io
+
 # install the following base packages
-yum install -y  wget git zile nano net-tools containerd.io docker-ce-18.06.3.ce-3.el7 \
+yum install -y  wget git zile nano net-tools docker-ce-18.06.3.ce-3.el7 \
 				bind-utils iptables-services \
 				bridge-utils bash-completion \
 				kexec-tools sos psacct openssl-devel \
